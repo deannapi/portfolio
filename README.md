@@ -1,6 +1,8 @@
 # Portfolio
 
 ## About DeAnna
+* Hobbies
+* Skills
 
 ## Built With
 * HTML
