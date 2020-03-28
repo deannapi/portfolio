@@ -17,12 +17,11 @@ body {
 header {
     justify-content: space-between;
     display: flex;
-    background-color: dimgrey;
     flex-wrap: wrap;
     position: sticky;
     position: -webkit-sticky;
     top: 0;
-    padding: 20px 35px;
+    padding: 50px 35px;
     background-image: url("../images/golddots.jpg");
     background-size: 50%;
     background-position: center;
@@ -33,7 +32,7 @@ header {
 
 header h1 {
     font-weight: bold;
-    font-size: 30px;
+    font-size: 45px;
     color: var(--color-two);
     margin: 0;
     text-shadow: 0 0 12px rgba(0, 0, 0, .5);
@@ -64,7 +63,7 @@ header nav ul li a {
 }
 
 section {
-    padding: 100px;
+    padding: 50px;
 }
 
 footer {
@@ -92,6 +91,10 @@ footer h2 {
     text-decoration: underline;
 }
 
+.contact address ul {
+
+}
+
 .contact address ul li {
     font-style: normal;
     font-size: 16px;
@@ -99,6 +102,8 @@ footer h2 {
     flex-wrap: wrap;
     align-items: center;
     color: #191970;   
+    margin: 10px 30px;
+
 }
 
 .contact address ul li a {
@@ -119,11 +124,53 @@ footer h2 {
 
 .contact address p {
     font-size: 20px;
-    color: 	#DC143C;
+    color: #B6475D;
     font-weight: bold;
     font-style: normal;
 }
 
-.social-media {
-    
+.contact address ul li img {
+    max-width: 2%;
+    background-color: ;
+}
+
+.me {
+    background-color: #B0E0E6;
+    font-style: normal;
+    font-size: 18px;
+}
+
+.me div {
+    color: #00008B;
+    font-weight: bold;
+}
+
+.me p {
+    text-decoration: underline;
+}
+
+.work {
+    background-color: #B0E0E6;
+    font-style: normal;
+    font-size: 18px;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 200px;
+    gap: 10px;
+    background-color: var(--color-one);
+    padding: 10px;
+    align-content: center;
+    text-align: center;
+    color: white;
+    list-style-position: inside;
+}
+
+.grid-container > div {
+    background-color: darkblue;
+    border: 1px solid black;
+    text-align: center;
+    font-size: 18px;
 }
