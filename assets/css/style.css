@@ -19,7 +19,6 @@ header {
     justify-content: space-between;
     display: flex;
     flex-wrap: wrap;
-    position: sticky;
     position: -webkit-sticky;
     top: 0;
     padding: 20px 20px;
@@ -168,55 +167,43 @@ footer h2 {
     color: var(--color-two);
 }
 
+.work p {
+    font-size: 20px;
+}
+.work h4 {
+    color: var(--color-four);
+    font-weight: normal;
+}
 .work h2:hover {
     color: 	#191970;
 }
 
-.work p {
-    
-    font-size: 20px;
-    text-decoration: none;
-    font-weight: normal;
-}
-
 .work li::first-letter {
     color: 	#00FFFF;
-    font-size: 22px;
 }
 
 .work h3:hover {
     color: 	#00FFFF;
 }
 
-.grid-container {
-    display: grid;
-    grid-template-columns: 150px repeat(4, 1fr);
-    grid-template-rows: auto;
-    gap: 10px;
-    background-color: var(--color-one);
-    padding: 10px;
-    align-content: space-around;
-    text-align: center;
-    color: white;
-    list-style-position: inside;
-    justify-content: space-around;
+.work img {
+    width: 500px;
+    height: 200px;
 }
 
-.grid-container > div {
-    background-color: 	#008080;
-    border: 1px solid rgb(5, 167, 189);
-    text-align: center;
-}
-
-.grid-container p {
-    text-decoration: none;
-    font-size: 22px;
-    color: var(--color-four);
+.work img:hover {
+    -webkit-transform: scale(1.2);
+    -moz-transform: scale(1.2);
+    transform: scale(1.2);
+    z-index:10;
+    -webkit-box-shadow: 0 10px 20px rgba(0, 0, 0, .7);
+    -moz-box-shadow: 0 10px 20px rgba(0,0,0,.7);
+    box-shadow: 0 10px 20px rgba(0,0,0,.7);
 }
 
 ul.a {
     list-style-type: none ;
-    font-size: 8px;
+    font-size: 16px;
 }
 
 ul.a li {
@@ -248,11 +235,12 @@ ul.a li {
     align-items: center;
     color: white;   
     margin: 10px 30px;
+    line-height: 2;
 }
 
 .contact address ul li {
     list-style: none;
-    text-align: left;
+    text-align: center;
 }
 
 .contact address ul li a {
@@ -269,20 +257,12 @@ ul.a li {
     color: #00FFFF;
 }
 
-.contact address p {
-    font-size: 20px;
-    color: white;
-    font-weight: bold;
-    font-style: normal;
-    text-align: left;
-}
-
 .contact address ul li::first-letter {
     color: #00FFFF;
 }
 
 .media img {
-    max-width: 7%;
+    max-width: 25px;
 }
 
 .media li a {
@@ -294,19 +274,140 @@ ul.a li {
     color: #00FFFF;
 }
 
+/* GRID CONTAINER */
+.grid-container {
+    display: grid;
+    grid-template-columns: 150px repeat(4, 1fr);
+    grid-template-rows: auto repeat(1, 1fr);
+    gap: 10px;
+    background-color: var(--color-one);
+    padding: 10px;
+    align-content: space-around;
+    text-align: center;
+    color: white;
+    list-style-position: inside;
+    justify-content: space-evenly;
+}
+
+.grid-container > div {
+    background-color: 	#008080;
+    border: 1px solid rgb(5, 167, 189);
+    text-align: center;
+}
+
+.grid-container h2 {
+    grid-column: 1 / 1 / span 2 / span 1;
+}
+.grid-container p {
+    text-decoration: none;
+    font-size: 21px;
+    color: var(--color-four);
+}
+
 .grid1 {
-    grid-column: 2 / span 4;
+    grid-area: 1 / 2 / span 2 / span 4;
 }
 
 .grid2 {
     grid-column: 2 / span 1;
 }
 
+.grid3 ul {
+    column-count: 3;
+}
+
 .grid3 {
-    grid-column: 3 / span 2;
+    grid-column: 3 / span 3;
 }
 
 .grid4 {
-    grid-column: 2 / span 1;
+    grid-area: 1 / 2 / span 1 / span 4;
 }
 
+.grid5 {
+    grid-area: 2 / 2 / span 1 / span 4;
+}
+
+.grid-b {
+    grid-area: 1 / 1 / span 2 / span 1;   
+}
+
+.grid-m {
+    grid-area: 2 / 2 / span 1 / span 4;
+}
+
+/*MEDIA QUERY FOR SMALL DESKTOP SCREENS AND SMALLER */
+@media screen and (max-width: 980px) {
+    header {
+        padding-block-start: 0;
+        justify-content: space-evenly;
+    }
+
+    .polaroid img {
+        display: block;
+        width: 100px;
+        height: 150px;
+    }
+
+    .contact {
+        font-size: 14px;
+    }
+
+    .media img {
+        max-width: 8%;
+    }
+}
+
+/*MEDIA QUERY FOR TABLETS AND SMALLER */
+@media screen and (max-width: 768px) {
+    section {
+        padding: 30px 15px;
+    }
+    
+    ul.a {font-size: 8px;}
+
+}
+
+/*MEDIA QUERY FOR MOBILE PHONES AND SMALLER */
+@media screen and (max-width: 575px) {
+
+    .media img {
+        max-width: 15px;
+    }
+
+    ul.a {font-size: 8px;}
+
+    .work h2 {
+        text-decoration: underline;
+        font-size: 10px;
+        font-variant: small-caps;
+        color: var(--color-two);
+    }
+
+    .contact h2 {
+        text-decoration: underline;
+        font-size: 2px;
+        font-variant: small-caps;
+        color: var(--color-two);
+    }
+
+    .media li a {
+        line-height: 10px;
+    }
+
+    .grid2 {
+        grid-area: 1 / 2 / span 1 /span 4;
+    }
+
+    .grid3 {
+        grid-area: 2 / 2 / span 1 / span 4;
+    }
+
+    .grid4 {
+        grid-area: 1 / 2 / span 1 / span 4;
+    }
+    
+    .grid5 {
+        grid-area: 2 / 2 / span 1 / span 4;
+    }
+}
