@@ -1,8 +1,11 @@
 # Portfolio
 
 ## About DeAnna
-* Hobbies
+* Education
+* Work
+* Technologies
 * Skills
+* Contact Me
 
 ## Built With
 * HTML
