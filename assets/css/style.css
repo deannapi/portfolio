@@ -1,7 +1,7 @@
-* {
+/* * {
     margin: 0;
     padding: 0;
-}
+} */
 
 :root {
     --color-one: #fa8072;
@@ -114,14 +114,11 @@ footer {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-}
-
-footer h2 {
     color: #191970;
-    font-size: 18px;
+    font-size: 22px;
     margin: 0;
 }
- 
+
 /*ABOUT ME */
 .me {
     background-color: #B0E0E6;
@@ -261,24 +258,32 @@ ul.a li {
     color: #00FFFF;
 }
 
-.media img {
-    max-width: 25px;
-}
-
 .media li a {
     list-style: none;
-    color: white;
+    font-size: 30px;
 }
 
-.media li a:hover {
-    color: #00FFFF;
+.fa-linkedin {
+    color: #2867b2;
 }
+
+.fa-github {
+    color: black;
+}
+
+.fa-instagram {
+    color: transparent;
+    background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+    background: -webkit-radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+    background-clip: text;
+    -webkit-background-clip: text;
+  }
 
 /* GRID CONTAINER */
 .grid-container {
     display: grid;
     grid-template-columns: 150px repeat(4, 1fr);
-    grid-template-rows: auto repeat(1, 1fr);
+    grid-template-rows: 150px repeat(1, 1fr);
     gap: 10px;
     background-color: var(--color-one);
     padding: 10px;
@@ -370,6 +375,9 @@ ul.a li {
 
 /*MEDIA QUERY FOR MOBILE PHONES AND SMALLER */
 @media screen and (max-width: 575px) {
+    .polaroid {
+        margin: 10px;
+    }
 
     .media img {
         max-width: 15px;
@@ -409,5 +417,9 @@ ul.a li {
     
     .grid5 {
         grid-area: 2 / 2 / span 1 / span 4;
+    }
+
+    .a {
+        font-size: 14px;
     }
 }
